@@ -1,0 +1,40 @@
+use blog;
+
+var spot = [
+    {
+        title : "Today is Tomorrow",
+        content : "Philosphy",
+        date : new Date("2024-03-04")
+    },
+    {
+        title : "Top 5 Taco Trucks of All Time",
+        content : "Food",
+        date : new Date("2024-03-05")
+    },
+    {
+        title : "Python For Beginners",
+        content : "Computer Programming",
+        date : new Date("2024-03-06")
+    },
+    {
+        title : "SpongeBob Ep. 20 Review",
+        content : "Television",
+        date : new Date("2024-03-07")
+    }
+]
+
+db.blog.insertMany(spot);
+
+a. Display the blog collection. How you can return only the one document
+
+db.blog.find();
+// return 1
+db.blog.find().limit(1);
+
+b. Make an update of the document using the title
+
+db.blog.updateMany({}, {$set : {title: "Default Title"}});
+
+c. Delete the document
+
+db.blog.deleteMany({})
